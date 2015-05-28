@@ -1,5 +1,5 @@
 require 'rspec'
-require 'lib/prime_time'
+require 'prime_time'
 
 describe "is it prime?" do
     it "returns true for a prime number" do
@@ -16,12 +16,12 @@ describe "is it prime?" do
   end
 
   it "returns false for a non-prime number" do
-    expect(is_prime?(4)).to eq(false)
-    expect(is_prime?(8)).to eq(false)
-    expect(is_prime?(12)).to eq(false)
-    expect(is_prime?(14)).to eq(false)
-    expect(is_prime?(15)).to eq(false)
-    expect(is_prime?(25)).to eq(false)
-    expect(is_prime?(30)).to eq(false)
+    expect(is_prime?(6)).to eq(false)
+    expect(is_prime?(16)).to eq(false)
+    expect(is_prime?(18)).to eq(false)
+    expect(is_prime?(20)).to eq(false)
+    expect(is_prime?(22)).to eq(false)
+    expect(is_prime?(48)).to eq(false)
+    expect(is_prime?(90)).to eq(false)
   end
 end
