@@ -43,8 +43,6 @@ def print_table(n=10)
   end
 end
 
-binding.pry
-
 # Respond to --count without using OptionParser
 
 if ARGV[0] == '--count'

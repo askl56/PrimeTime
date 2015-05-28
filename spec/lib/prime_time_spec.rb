@@ -30,7 +30,7 @@ context "prime_storage functon" do
 end
 
 context "test the times_the_primes function" do
-  describe "returns matrixes" do
+  describe "returns matrices" do
     it "retuns a matrix of primes times tables" do
       expect(times_the_primes(2)).to eq([[1,2,3],[2,4,6],[3,6,9]])
       expect(times_the_primes(4)).to eq([[1,2,3,5,7],[2,4,6,10,14],[3,6,9,15,21],[5,10,15,25,35],[7,14,21,35,49]])
