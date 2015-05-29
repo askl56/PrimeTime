@@ -1,4 +1,5 @@
 class PrimeTime
+
   def initialize(i)
     print_table(i)
   end
@@ -37,21 +38,21 @@ class PrimeTime
 
   # Print the table
 
-  class PrimeTimeTable
-    def print_table(n = 10)
-      matrix = times_the_primes(n)
-      matrix.each do |row|
-        row.each do |cell|
-          cell = ' ' if cell == 1
-          print cell.to_s.rjust(5)
-        end
-        puts "\n"
+  def print_table(n = 10)
+    matrix = times_the_primes(n)
+    matrix.each do |row|
+      row.each do |cell|
+        cell = ' ' if cell == 1
+        print cell.to_s.rjust(5)
       end
+      puts "\n"
     end
   end
 end
 
-# Respond to --count without using OptionParser
+
+# Respond to --count without using OptionParser, returning a table of the users
+# choice
 
 if ARGV[0] == '--count'
   PrimeTime.new ARGV[1].to_i
