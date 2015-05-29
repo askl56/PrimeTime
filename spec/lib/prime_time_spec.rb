@@ -4,14 +4,14 @@ require 'prime_time'
 context 'is_prime? function' do
   describe 'checks if a number is prime' do
     it 'returns true if number is prime' do
-      expect(is_prime?(2)).to eq(true)
-      expect(is_prime?(3)).to eq(true)
-      expect(is_prime?(31)).to eq(true)
+      expect(prime?(2)).to eq(true)
+      expect(prime?(3)).to eq(true)
+      expect(prime?(31)).to eq(true)
     end
 
     it 'returns false if number is composite' do
-      expect(is_prime?(6)).to eq(false)
-      expect(is_prime?(16)).to eq(false)
+      expect(prime?(6)).to eq(false)
+      expect(prime?(16)).to eq(false)
     end
   end
 end

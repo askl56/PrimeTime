@@ -1,5 +1,4 @@
 class PrimeTime
-
   def initialize(i)
     print_table(i)
   end
@@ -38,14 +37,16 @@ class PrimeTime
 
   # Print the table
 
-  def print_table(n = 10)
-    matrix = times_the_primes(n)
-    matrix.each do |row|
-      row.each do |cell|
-        cell = ' ' if cell == 1
-        print cell.to_s.rjust(5)
+  class PrimeTimeTable
+    def print_table(n = 10)
+      matrix = times_the_primes(n)
+      matrix.each do |row|
+        row.each do |cell|
+          cell = ' ' if cell == 1
+          print cell.to_s.rjust(5)
+        end
+        puts "\n"
       end
-      puts "\n"
     end
   end
 end
