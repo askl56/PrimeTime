@@ -1,20 +1,6 @@
 require 'rspec'
 require 'prime_time'
 
-context 'is_prime? function' do
-  describe 'checks if a number is prime' do
-    it 'returns true if number is prime' do
-      expect(prime?(2)).to eq(true)
-      expect(prime?(3)).to eq(true)
-      expect(prime?(31)).to eq(true)
-    end
-
-    it 'returns false if number is composite' do
-      expect(prime?(6)).to eq(false)
-      expect(prime?(16)).to eq(false)
-    end
-  end
-end
 
 context 'prime_storage function' do
   describe 'stores prime numbers in an array' do
