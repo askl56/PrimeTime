@@ -15,11 +15,11 @@ Run ```bundle install```
 
 To run the program, run ```main.rb```
 
-By default the app will return a 10 column and row times table of prime numbers. However, by appending ```--count <integer>``` and replacing ```<integer``` with an integer of your choosing, you can make the table as large or as small as you like. 
+By default the app will return a 10 column and row times table of prime numbers. However, by appending ```--count <integer>``` and replacing ```<integer>``` with an integer of your choosing, you can make the table as large or as small as you like. 
 
 In order to check tests and functionality, run ```rspec spec```
 
-Standard Output with no parameters given should look like 
+Standard Output with no parameters given should look like this.
 
 ```
    |  2|  3|  5|  7| 11| 13| 17| 19| 23| 29|
