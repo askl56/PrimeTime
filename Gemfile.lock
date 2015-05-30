@@ -31,6 +31,7 @@ GEM
     pry-byebug (3.1.0)
       byebug (~> 4.0)
       pry (~> 0.10)
+    rake (10.4.2)
     rspec (3.2.0)
       rspec-core (~> 3.2.0)
       rspec-expectations (~> 3.2.0)
@@ -55,4 +56,5 @@ DEPENDENCIES
   fuubar
   pry
   pry-byebug
+  rake
   rspec
