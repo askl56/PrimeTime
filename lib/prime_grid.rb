@@ -1,6 +1,6 @@
 class PrimeGrid
   # First I initialize the class so that it can be accessed by
-  # main.rb
+  # main.rb.
 
   def initialize(matrix)
     @matrix = matrix
