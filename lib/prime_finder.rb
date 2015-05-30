@@ -13,7 +13,7 @@ class PrimeFinder
     infinity = 1.0 / 0
 
     primes = (2..infinity).lazy.select do |i|
-      !(2...i).any? {|j| i % j == 0  }
+      !(2...i).any? {|x| i % x == 0  }
     end
 
     primes.first(n)

@@ -18,6 +18,8 @@ class PrimeGrid
         col = '' if col == 1
         print col.to_s.rjust(max_col_width) + '|'
       end
+      max_col_width = @matrix.flatten.map(&:to_s).map(&:length).max
+      column_count = @matrix[0].count
       puts "\n"
     end
   end
