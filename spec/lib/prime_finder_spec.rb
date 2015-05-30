@@ -18,3 +18,12 @@ context "Tests the Prime Finder method" do
     end
   end
 end
+
+context 'test the times_primes function' do
+  describe 'returns matrices' do
+    it 'retuns a matrix of primes times tables' do
+      expect(PrimeFinder.times_primes(2)).to eq([[1, 2, 3], [2, 4, 6], [3, 6, 9]])
+      expect(PrimeFinder.times_primes(4)).to eq([[1, 2, 3, 5, 7], [2, 4, 6, 10, 14], [3, 6, 9, 15, 21], [5, 10, 15, 25, 35], [7, 14, 21, 35, 49]])
+    end
+  end
+end
