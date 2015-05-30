@@ -1,10 +1,9 @@
 require_relative 'lib/prime_finder'
 require_relative 'lib/prime_grid'
 
-prime_table(n)
+primes_count = ARGV[0] == '--count' ? ARGV[1].to_i : 10
 
-if ARGV[0] == '--count'
-  PrimeGrid.new ARGV[1].to_i
-else
-  PrimeGrid.new 10
-end
+prime_matrix = PrimeFinder.times_primes(primes_count)
+
+prime_grid = PrimeGrid.new prime_matrix
+prime_grid.render
