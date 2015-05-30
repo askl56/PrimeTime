@@ -19,17 +19,18 @@ class PrimeFinder
     primes.first(n)
   end
 
-  # As you can see, the method uses the Lazy emunerator to iterate up to
-  # infinity, but without impacting performance. It is then simply a case
-  # of collecting the desired number of primes into an array.
-
-  # This method multiplies the primes together in order to generate an array
-  # of the multiplied values.
+  # As you can see, the method uses the Lazy emunerator class method
+  # to iterate up to infinity, but without impacting performance. It is
+  # then simply a case of collecting the desired number of primes into an
+  # array.
 
   def self.times_primes(n = 10)
     primes = find_primes(n)
     primes.unshift(1)
-    multi = []
-    multi = primes.map {|prime1| primes.map {|prime2| prime2 * prime1 } }
+    multi = primes.map { |prime1| primes.map {|prime2| prime2 * prime1 } }
   end
+
+  # This method multiplies the primes together in order to generate an array
+  # of the multiplied values.
+
 end
