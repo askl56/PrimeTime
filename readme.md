@@ -22,7 +22,7 @@ In order to check tests and functionality, run ```rspec spec```
 Examples
 ---
 
-Standard output(```main.rb```) with no parameters given should look like this:
+Standard output (```main.rb```) with no parameters given should look like this:
 
 ```
    |  2|  3|  5|  7| 11| 13| 17| 19| 23| 29|
