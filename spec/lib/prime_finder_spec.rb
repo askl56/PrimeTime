@@ -1,8 +1,8 @@
 require 'rspec'
 require 'prime_finder'
 
-context "Tests the Prime Finder method" do
-  describe "tests to see if a number is prime" do
+context "Tests the Prime Finder class" do
+  describe "tests prime_finder to see if a number is prime" do
     it "can detect a prime number and replace it in the array" do
       expect(PrimeFinder.find_primes).to include(2)
     end
