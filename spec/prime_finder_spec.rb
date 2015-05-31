@@ -4,13 +4,13 @@ require 'prime_finder'
 context "Tests the Prime Finder class" do
   describe "tests prime_finder to see if a number is prime" do
     it "can detect a prime number and replace it in the array" do
-      expect(PrimeFinder.find_primes).to include(2)
+      expect(PrimeFinder.find_primes(10)).to include(2)
     end
   end
 
   describe "it returns an array of primes" do
     it "returns a default array when no parameter is passed" do
-      expect(PrimeFinder.find_primes).to eq([2, 3, 5, 7, 11, 13, 17, 19, 23, 29])
+      expect(PrimeFinder.find_primes(10)).to eq([2, 3, 5, 7, 11, 13, 17, 19, 23, 29])
     end
 
     it "can accept a parameter and return the number of primes" do
@@ -20,7 +20,7 @@ context "Tests the Prime Finder class" do
 
   describe "if failing" do
     it "does not return composite numbers when no parameter is passed" do
-      expect(PrimeFinder.find_primes).not_to include(10)
+      expect(PrimeFinder.find_primes(10)).not_to include(10)
     end
 
     it "does not return composite numbers when parameter is passed" do
@@ -30,7 +30,7 @@ context "Tests the Prime Finder class" do
   context 'test the times_primes function' do
     describe 'returns matrices' do
       it "returns a default of 10 arrays" do
-        expect(PrimeFinder.times_primes).to eq([[1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29],
+        expect(PrimeFinder.times_primes(10)).to eq([[1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29],
                                                 [2, 4, 6, 10, 14, 22, 26, 34, 38, 46, 58],
                                                 [3, 6, 9, 15, 21, 33, 39, 51, 57, 69, 87],
                                                 [5, 10, 15, 25, 35, 55, 65, 85, 95, 115, 145],

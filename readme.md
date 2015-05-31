@@ -40,7 +40,7 @@ Standard output (```bin/prime_time```) with no parameters given should look like
 
 ```
 
-``` main.rb --count 15``` would show:
+``` bin/prime_time --count 15``` would show:
 
 ```
     |   2|   3|   5|   7|  11|  13|  17|  19|  23|  29|  31|  37|

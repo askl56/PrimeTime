@@ -13,9 +13,9 @@ module PrimeFinder
   # process I realised that it is possible to do both.
 
   def find_primes(n)
-    infinity = Float::INFINITY
+    inf = Float::INFINITY
 
-    primes = (2..infinity).lazy.select do |i|
+    primes = (2..inf).lazy.select do |i|
       (2...i).none? {|x| i % x == 0  }
     end
 
