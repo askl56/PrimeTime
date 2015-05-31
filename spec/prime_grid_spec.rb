@@ -1,5 +1,9 @@
 require 'prime_grid'
-require './helpers/helper'
+require_relative './helpers/helpers'
+
+RSpec.configure do |c|
+  c.include Helpers
+end
 
 describe PrimeGrid do
 
@@ -13,13 +17,14 @@ describe PrimeGrid do
     end
   end
 
-  describe "rendering a matrix with information" do
+  describe "rendering a multi line matrix with information and formatting" do
     let(:double_matrix) { described_class.new([[1,2,3], [3,4,5]]) }
 
-    it "returns a 2 line matrix" do
+    it "returns a 2 line matrix and formats correctly" do
       output = capture_stdout { double_matrix.render }
-      expect(output).to eq(" |2|3|\n -|-|-|\n 2|4|6\n 3|6|9")
+      expect(output).to eq(" |2|3|\n-|-|-|\n3|4|5|\n")
     end
-
   end
+
+
 end
