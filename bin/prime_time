@@ -1,5 +1,7 @@
-require_relative 'lib/prime_finder'
-require_relative 'lib/prime_grid'
+#! /usr/bin/env ruby -w
+
+require_relative '../lib/prime_finder'
+require_relative '../lib/prime_grid'
 
 primes_count = ARGV[0] == '--count' ? ARGV[1].to_i : 10
 

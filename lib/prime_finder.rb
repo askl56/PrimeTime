@@ -12,11 +12,11 @@ module PrimeFinder
   # and stores the prime numbers in an array, in the course of the refactoring
   # process I realised that it is possible to do both.
 
-  def find_primes(n = 10)
-    infinity = 1.0 / 0
+  def find_primes(n)
+    infinity = Float::INFINITY
 
     primes = (2..infinity).lazy.select do |i|
-      !(2...i).any? {|x| i % x == 0  }
+      (2...i).none? {|x| i % x == 0  }
     end
 
     primes.first(n)
@@ -27,14 +27,16 @@ module PrimeFinder
   # then simply a case of collecting the desired number of primes into an
   # array.
 
-  def times_primes(n = 10)
+  def times_primes(n)
     primes = find_primes(n)
     primes.unshift(1)
-    multi = primes.map { |prime1| primes.map {|prime2| prime2 * prime1 } }
+    primes.map { |prime1| primes.map {|prime2| prime2 * prime1 } }
   end
 
   # This method multiplies the primes together in order to generate an array
-  # of the multiplied values. I stacked the map functions to make it more
-  # semantic.
+  # of the multiplied values. This is then fed into the executable to generate
+  # matrices.
+
+  # I stacked the map functions to make it more efficient.
 
 end
