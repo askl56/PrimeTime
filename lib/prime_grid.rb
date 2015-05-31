@@ -28,12 +28,4 @@ class PrimeGrid
   def render_row_sep(max_col_width, column_count)
     puts ('-' * max_col_width) + '|' + ('-' * (max_col_width) + '|') * (column_count - 1)
   end
-
-  # The problem with this class is that it effectively handles 3 concerns.
-  # It handles the creation of a matrix, the formatting of the matrix and
-  # the implicit responsibility of co-ordinating this.
-
-  # Whilst this isn't ideal, at my current technical level I felt that this
-  # was the best that I could do confidently without making it needlessly
-  # complicated.
 end
