@@ -12,8 +12,6 @@ module PrimeFinder
   # and stores the prime numbers in an array, in the course of the refactoring
   # process I realised that it is possible to do both.
 
-
-
   def find_primes(n = 10)
     infinity = 1.0 / 0
 
