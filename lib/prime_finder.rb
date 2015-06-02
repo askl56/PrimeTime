@@ -40,13 +40,3 @@ module PrimeFinder
   # I stacked the map functions to make it more efficient.
 
 end
-
-def find_primes(n)
-  inf = Float::INFINITY
-
-  primes = (2..inf).lazy.select do |i|
-    (2...i).none? {|x| i % x == 0  }
-  end
-
-  primes.first(n)
-end
