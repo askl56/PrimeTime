@@ -2,10 +2,22 @@
 
 require_relative '../lib/prime_finder'
 require_relative '../lib/prime_grid'
+require_relative '../lib/square_finder'
 
-primes_count = ARGV[0] == '--count' ? ARGV[1].to_i : 10
+count = ARGV[0] == '--count' ? ARGV[1].to_i : 10
+algo = ARGV[2] == '--algo' ? ARGV[3] : 'primes'
 
-prime_matrix = PrimeFinder.times_primes(primes_count)
+if algo == 'primes'
+  list = PrimeFinder.find_primes(count)
+else
+  list = SquareFinder.find_squares(count)
+end
+
+
+
+
+
+prime_matrix = PrimeFinder.multi(list)
 
 prime_grid = PrimeGrid.new prime_matrix
 prime_grid.render

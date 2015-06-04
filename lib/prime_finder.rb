@@ -27,10 +27,9 @@ module PrimeFinder
   # then simply a case of collecting the desired number of primes into an
   # array.
 
-  def times_primes(n)
-    primes = find_primes(n)
-    primes.unshift(1)
-    primes.map { |prime1| primes.map {|prime2| prime2 * prime1 } }
+  def multi(list)
+    list.unshift(1)
+    list.map { |list1| list.map {|list2| list2 * list1 } }
   end
 
   # This method multiplies the primes together in order to generate an array
