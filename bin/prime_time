@@ -1,16 +1,20 @@
 #! /usr/bin/env ruby -w
 
-require_relative '../lib/prime_finder'
+require_relative '../lib/finders/prime_finder'
 require_relative '../lib/prime_grid'
-require_relative '../lib/square_finder'
+require_relative '../lib/finders/square_finder'
+require_relative '../lib/finders/times_finder'
 
 count = ARGV[0] == '--count' ? ARGV[1].to_i : 10
 algo = ARGV[2] == '--algo' ? ARGV[3] : 'primes'
 
+
 if algo == 'primes'
   list = PrimeFinder.find_primes(count)
-else
+elsif algo == 'square'
   list = SquareFinder.find_squares(count)
+elsif algo == 'times'
+  list = TimesFinder.find_times(count)
 end
 
 
