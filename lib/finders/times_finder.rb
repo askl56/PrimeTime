@@ -1,5 +1,4 @@
 module TimesFinder
-
   module_function
 
   def find_times(n)

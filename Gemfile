@@ -5,4 +5,3 @@ gem 'rspec'
 gem 'pry'
 gem 'fuubar'
 gem 'pry-byebug'
-

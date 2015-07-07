@@ -1,5 +1,4 @@
 class PrimeGrid
-
   # First I initialize the class so that it can be accessed by
   # the executable
 
@@ -15,7 +14,7 @@ class PrimeGrid
     column_count = @matrix[0].count
     @matrix.each_with_index do |row, row_num|
       render_row_sep(max_col_width, column_count) if row_num == 1
-      row.each_with_index do |col, col_num|
+      row.each_with_index do |col, _col_num|
         col = '' if col == 1
         print col.to_s.rjust(max_col_width) + '|'
       end

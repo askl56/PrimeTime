@@ -1,5 +1,4 @@
 module SquareFinder
-
   module_function
 
   def find_squares(n)

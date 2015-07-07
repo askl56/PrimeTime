@@ -1,5 +1,5 @@
 module Helpers
-  def capture_stdout(&block)
+  def capture_stdout(&_block)
     original_stdout = $stdout
     $stdout = fake = StringIO.new
     begin

@@ -1,5 +1,4 @@
 module PrimeFinder
-
   # I deliberated for a while on whether to use a class or an object for this.
   # I decided that since these are purely behavioural helper methods and nothing
   # is instantiated, it make more sense to be a module.
@@ -16,7 +15,7 @@ module PrimeFinder
     inf = Float::INFINITY
 
     primes = (2..inf).lazy.select do |i|
-      (2...i).none? {|x| i % x == 0  }
+      (2...i).none? { |x| i % x == 0  }
     end
 
     primes.first(n)
@@ -29,7 +28,7 @@ module PrimeFinder
 
   def multi(list)
     list.unshift(1)
-    list.map { |list1| list.map {|list2| list2 * list1 } }
+    list.map { |list1| list.map { |list2| list2 * list1 } }
   end
 
   # This method multiplies the primes together in order to generate an array
@@ -37,5 +36,4 @@ module PrimeFinder
   # matrices.
 
   # I stacked the map functions to make it more efficient.
-
 end
