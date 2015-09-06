@@ -1,5 +1,4 @@
 class PrimeGrid
-
   def initialize(matrix)
     @matrix = matrix
   end

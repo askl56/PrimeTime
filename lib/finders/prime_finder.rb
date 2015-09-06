@@ -1,5 +1,4 @@
 module PrimeFinder
-
   module_function
 
   def find_primes(n)
@@ -16,5 +15,4 @@ module PrimeFinder
     list.unshift(1)
     list.map { |list1| list.map { |list2| list2 * list1 } }
   end
-
 end
