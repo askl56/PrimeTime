@@ -1,13 +1,8 @@
 class PrimeGrid
-  # First I initialize the class so that it can be accessed by
-  # the executable
 
   def initialize(matrix)
     @matrix = matrix
   end
-
-  # Because I am already passing in a matrix through to the executable
-  # the only thing I need to do here is to fill out the matrix and style it.
 
   def render
     max_col_width = @matrix.flatten.map(&:to_s).map(&:length).max
