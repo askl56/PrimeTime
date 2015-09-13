@@ -17,7 +17,7 @@ class PrimeGrid
   end
 
   private
-
+ 
   def render_row_sep(max_col_width, column_count)
     puts ('-' * max_col_width) + '|' + ('-' * (max_col_width) + '|') * (column_count - 1)
   end
