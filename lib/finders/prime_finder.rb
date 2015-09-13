@@ -1,4 +1,5 @@
 module PrimeFinder
+  
   module_function
 
   def find_primes(n)
